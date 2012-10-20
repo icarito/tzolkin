@@ -1,0 +1,26 @@
+{
+  "mainFile": "tzolkin.py", 
+  "venv": "", 
+  "relatedProjects": [], 
+  "name": "Tzolkin", 
+  "license": "GNU General Public License v3", 
+  "url": "", 
+  "pythonPath": "python", 
+  "preExecScript": "", 
+  "programParams": "", 
+  "PYTHONPATH": "", 
+  "supported-extensions": [
+    ".py", 
+    ".html", 
+    ".jpg", 
+    ".png", 
+    ".ui", 
+    ".css", 
+    ".json", 
+    ".js", 
+    ".ini"
+  ], 
+  "project-type": "", 
+  "postExecScript": "", 
+  "description": "Calendario de las 13 Lunas"
+}
