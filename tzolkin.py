@@ -6,7 +6,6 @@ import pygtk, glib
 import gobject
 pygtk.require('2.0')
 import gtk
-import egg.trayicon
 import pynotify
 pynotify.init('Tzolkin')
 
