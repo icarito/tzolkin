@@ -1,9 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from datetime import date
-import math
-
 tablaA = dict()
 tablaA[1910]=62
 tablaA[1911]=167
@@ -158,26 +155,176 @@ tonosf[11] = "Espectral"
 tonosf[12] = "Cristal"
 tonosf[13] = "Cósmica"
 
-sellos = [ "Sol",
-        "Dragón",
-        "Viento",
-        "Noche",
-        "Semilla",
-        "Serpiente",
-        "Enlazador de Mundos",
-        "Mano",
-        "Estrella",
-        "Luna",
-         "Perro",
-         "Mono",
-         "Humano",
-         "Caminante del Cielo",
-         "Mago",
-         "Águila",
-         "Guerrero",
-         "Tierra",
-         "Espejo",
-         "Tormenta"]
+sellos = dict()
+sellos[1] = "Sol"
+sellos[2] = "Dragón"
+sellos[3] = "Viento"
+sellos[4] = "Noche"
+sellos[5] = "Semilla"
+sellos[6] = "Serpiente"
+sellos[7] = "Enlazador de Mundos"
+sellos[8] = "Mano"
+sellos[9] = "Estrella"
+sellos[10] = "Luna"
+sellos[11] = "Perro"
+sellos[12] = "Mono"
+sellos[13] = "Humano"
+sellos[14] = "Caminante del Cielo"
+sellos[15] = "Mago"
+sellos[16] = "Águila"
+sellos[17] = "Guerrero"
+sellos[18] = "Tierra"
+sellos[19] = "Espejo"
+sellos[20] = "Tormenta"
+
+ma = dict()
+ma[1] = "Unifico"
+ma[2] = "Polarizo"
+ma[3] = "Activo"
+ma[4] = "Defino"
+ma[5] = "Confiero Poder"
+ma[6] = "Organizo"
+ma[7] = "Canalizo"
+ma[8] = "Armonizo"
+ma[9] = "Pulso"
+ma[10] = "Perfecciono"
+ma[11] = "Disuelvo"
+ma[12] = "Me dedico"
+ma[13] = "Perduro"
+
+mg = dict()
+mg[1] = "Magnético"
+mg[2] = "Lunar"
+mg[3] = "Eléctrico"
+mg[4] = "Autoexistente"
+mg[5] = "Entonado"
+mg[6] = "Rítmico"
+mg[7] = "Resonante"
+mg[8] = "Galáctico"
+mg[9] = "Solar"
+mg[10] = "Planetario"
+mg[11] = "Espectral"
+mg[12] = "Cristal"
+mg[13] = "Cósmico"
+
+mh = dict()
+mh[1] = "el Propósito"
+mh[2] = "el Desafío"
+mh[3] = "el Servicio"
+mh[4] = "la Forma"
+mh[5] = "el Esplendor"
+mh[6] = "la Igualdad"
+mh[7] = "la Sintonización"
+mh[8] = "la Integridad"
+mh[9] = "la Intención"
+mh[10] = "la Manifestación"
+mh[11] = "la Liberación"
+mh[12] = "la Cooperación"
+mh[13] = "la Presencia"
+
+mc = dict()
+mc[1] = "Atrayendo"
+mc[2] = "Estabilizando"
+mc[3] = "Vinculando"
+mc[4] = "Midiendo"
+mc[5] = "Comandando"
+mc[6] = "Equilibrando"
+mc[7] = "Inspirando"
+mc[8] = "Modelando"
+mc[9] = "Realizando"
+mc[10] = "Produciendo"
+mc[11] = "Divulgando"
+mc[12] = "Universalizando"
+mc[13] = "Transcendiendo"
+
+mb = dict()
+mb[1] = "Nutrir"
+mb[2] = "Comunicar"
+mb[3] = "Soñar"
+mb[4] = "Atinar"
+mb[5] = "Sobrevivir"
+mb[6] = "Igualar"
+mb[7] = "Conocer"
+mb[8] = "Embellecer"
+mb[9] = "Purificar"
+mb[10] = "Amar"
+mb[11] = "Jugar"
+mb[12] = "Influenciar"
+mb[13] = "Explorar"
+mb[14] = "Encantar"
+mb[15] = "Crear"
+mb[16] = "Cuestionar"
+mb[17] = "Evolucionar"
+mb[18] = "Reflejar"
+mb[19] = "Catalizar"
+mb[20] = "Iluminar"
+
+mf = dict()
+mf[1] = "el Nacimiento"
+mf[2] = "el Espíritu"
+mf[3] = "la Abundancia"
+mf[4] = "el Florecimiento"
+mf[5] = "la Fuerza Vital"
+mf[6] = "la Muerte"
+mf[7] = "la Realización"
+mf[8] = "la Elegancia"
+mf[9] = "el Agua Universal"
+mf[10] = "el Corazón"
+mf[11] = "la Magia"
+mf[12] = "la Libre Voluntad"
+mf[13] = "el Espacio"
+mf[14] = "la Atemporalidad"
+mf[15] = "la Visión"
+mf[16] = "la Inteligencia"
+mf[17] = "la Navegación"
+mf[18] = "el Sinfín"
+mf[19] = "la Autogeneración"
+mf[20] = "el Fuego Universal"
+
+md = dict()
+md[1] = "el Ser"
+md[2] = "el Aliento"
+md[3] = "la Intuición"
+md[4] = "la Atención"
+md[5] = "el Instinto"
+md[6] = "la Oportunidad"
+md[7] = "la Curación"
+md[8] = "el Arte"
+md[9] = "el Flujo"
+md[10] = "la Lealtad"
+md[11] = "la Ilusión"
+md[12] = "la Sabiduría"
+md[13] = "la Vigilancia"
+md[14] = "la Receptividad"
+md[15] = "la Mente"
+md[16] = "la Intrepidez"
+md[17] = "la Sincronía"
+md[18] = "el Orden"
+md[19] = "la Energía"
+md[20] = "la Vida"
+
+mee = dict()
+mee[1] = "la entrada"
+mee[2] = "la entrada"
+mee[3] = "la entrada"
+mee[4] = "la entrada"
+mee[5] = "el almacén"
+mee[6] = "el almacén"
+mee[7] = "el almacén"
+mee[8] = "el almacén"
+mee[9] = "el proceso"
+mee[10] = "el proceso"
+mee[11] = "el proceso"
+mee[12] = "el proceso"
+mee[13] = "la salida"
+mee[14] = "la salida"
+mee[15] = "la salida"
+mee[16] = "la salida"
+mee[17] = "la matriz"
+mee[18] = "la matriz"
+mee[19] = "la matriz"
+mee[20] = "la matriz"
+
 
 def kin(x):
     valor_ano = tablaA[x.year]
@@ -187,14 +334,91 @@ def kin(x):
         valor = valor - 260
     return valor
 
+def sellonum(x):
+    sellonum = kin(x) % 20
+    if sellonum == 0:
+        sellonum = 20
+    return sellonum
+
 def sello(x):
-    return sellos[kin(x)%20]
+    return sellos[sellonum(x)+1]
 
 def raza(x):
     return "%s " % razas[kin(x)%4-1]
 
+def tononum(x):
+    tononum = kin(x) % 13
+    if tononum == 0:
+        tononum = 13
+    return tononum
+
 def tono(x):
-    return "%s " % tonosf[kin(x)%13]
+    return "%s" % tonosf[tononum(x)]
+
+def firma(x):
+    firma = "%s %s %s" % (sello(x),
+                          tono(x),
+                          raza(x))
+    return(firma)
+
+
+def afirmacion(x):
+    sello = sellonum(x)
+    tono = tononum(x)
+    afirmacion = "\n" + ma[tono] + ' con el fin de ' + mb[sello] + "\n"\
+                + mc[tono] + ' ' + md[sello] + "\n"\
+                + 'Sello ' + mee[sello] + " de " + mf[sello] + "\n"\
+                + 'Con el tono ' + mg[tono] + " de " + mh[tono] + "\n\n"
+
+    if guia(x) == sello:
+        afirmacion += "Me guía mi propio poder duplicado\n"
+    else:
+        afirmacion += "Me guía el poder de " + mf[guia(x)] + "\n"
+
+    if kin(x) in [1, 20, 22, 39, 43, 51, 50, 58, 64, 69, 72, 77, 85, 88, 93,
+                96, 165, 168, 173, 176, 184, 189, 192, 197, 203, 210, 211, 218,
+                222, 239, 241, 260] or \
+                (kin(x) > 105 and kin(x) < 116) or \
+                (kin(x) > 145 and kin(x) < 156):
+        afirmacion += "\nSoy un Portal de Activación Galáctica\n"
+
+    return afirmacion
+
+def onda(x):
+    sello = sellonum(x)
+    tono = tononum(x)
+    onda = sello - tono + 1
+    if onda < 1:
+        if onda == 0:
+            onda = 20
+        else:
+            onda = onda + 20
+    return onda
+
+def guia(x):
+    guia = onda(x) + 13 * (tononum(x) - 1)
+    guia = guia % 20
+    if guia == 0:
+        guia = 20
+    return guia
+
+def analogo(x):
+    analogo = 19 - sellonum(x)
+    if analogo == 0:
+        analogo = 20
+    if analogo == -1:
+        analogo = 19
+    return analogo
+
+def oculto(x):
+    oculto = 21 - sellonum(x)
+    return oculto
+
+def antipoda(x):
+    antipoda = sellonum(x) + 10
+    if antipoda > 20:
+        antipoda = antipoda - 20
+    return antipoda
 
 #fecha = date(2012,10,19)
 #print "Hoy"
