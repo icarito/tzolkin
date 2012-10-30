@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Tzolkin
+GenericName=Tzolkin el sentido del día 
+Comment=Sincronario de las 13 Lunas
+Exec=/usr/bin/tzolkin-applet
+Terminal=false
+Type=Application
+Categories=Office;Accesories
+X-GNOME-Autostart-enabled=true
