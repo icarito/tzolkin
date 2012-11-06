@@ -1,7 +1,6 @@
 import sys
 from cx_Freeze import setup, Executable
 
-
 # Dependencies are automatically detected, but it might need fine tuning.
 build_exe_options = {"packages": ["os", "tzolkin"], 
                     "include_files": ['tzolkin/images', 'tzolkin/images_big', 'tzolkin/tonos'],
