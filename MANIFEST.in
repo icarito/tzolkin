@@ -1,0 +1,4 @@
+recursive-include tzolkin *.py *.png
+recursive-exclude tzolkin *.pyc
+include tzolkin.desktop
+include tzolkin.png
