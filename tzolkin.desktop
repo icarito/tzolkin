@@ -1,0 +1,14 @@
+[Desktop Entry]
+Categories=Education;Calendar;GTK;GNOME;
+Name=Tzolkin
+Name[es]=Tzolkin
+GenericName=13 Moon Calendar
+GenericName[es]=Calendario de las 13 Lunas
+Comment=Un calendario galáctico
+Comment[es]=Un calendario galáctico
+Version=0.1
+Exec=tzolkin-applet
+Icon=tzolkin.png
+StartupNotify=false
+Terminal=false
+Type=Application

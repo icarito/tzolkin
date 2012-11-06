@@ -1,5 +1,5 @@
 {
-  "mainFile": "tzolkin.py", 
+  "mainFile": "tzolkin/tzolkintray.py", 
   "venv": "", 
   "relatedProjects": [], 
   "name": "Tzolkin", 
@@ -20,7 +20,7 @@
     ".js", 
     ".ini"
   ], 
-  "project-type": "", 
+  "project-type": "Import from sources", 
   "postExecScript": "", 
   "description": "Calendario de las 13 Lunas"
 }

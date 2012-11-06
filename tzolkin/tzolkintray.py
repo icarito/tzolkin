@@ -1,9 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import os
 import pygtk
-import glib
 import gobject
 pygtk.require('2.0')
 import gtk
@@ -13,11 +11,12 @@ pynotify.init('Tzolkin')
 import webbrowser
 from sincronario import *
 from datetime import date
+from pkg_resources import resource_filename
 
-_ROOT = os.path.abspath(os.path.dirname(__file__))
+
 def get_data(path):
-    print os.path.join(_ROOT, path)
-    return os.path.join(_ROOT, path)
+    return resource_filename('tzolkin', path)
+
 
 def kin_pixbuf(sello, tono):
     img_sello = gtk.gdk.pixbuf_new_from_file(get_data('images_big/' +
@@ -26,19 +25,16 @@ def kin_pixbuf(sello, tono):
                                                 str(tono) + '.png'))
     img_kin = gtk.gdk.Pixbuf(gtk.gdk.COLORSPACE_RGB, True, 8, 45, 61)
 
-    img_sello.copy_area(0,0,45,41, img_kin, 0, 20)
-    img_tono.copy_area(0,0,45,20, img_kin, 0, 0)
+    img_sello.copy_area(0, 0, 45, 41, img_kin, 0, 20)
+    img_tono.copy_area(0, 0, 45, 20, img_kin, 0, 0)
 
     return img_kin
+
 
 class TzolkinTray:
 
     def __init__(self):
-        #midnight = datetime.now().replace(hour=23, minute=59, second=59, microsecond=999)
-        #delta = midnight - datetime.now()
-        #seconds_to_midnight = delta.seconds
-        self.midnight_timer = gobject.timeout_add(1000*5, self.set_day)
-        #self.midnight_timer = gobject.timeout_add(1000 * seconds_to_midnight, self.set_day)
+        self.midnight_timer = gobject.timeout_add(1000 * 5, self.set_day)
 
         self.fecha = date.today()
         self.kin_string = "Kin %s\n%s %s %s" % (str(kin(self.fecha)),
@@ -87,10 +83,6 @@ class TzolkinTray:
         self.statusIcon.connect('activate', self.hover_cb, self.menu)
 
     def set_day(self):
-        #from random import random
-        #self.fecha = date.today().replace(day=int(random()*30+1))
-        #self.fecha = datetime.now().replace(hour=23, minute=59, second=59, microsecond=999) + timedelta(seconds=30)
-        #self.fecha = date.now() + timedelta(seconds=30)
         self.fecha = date.today()
         self.kin_string = "Kin %s\n%s" % (str(kin(self.fecha)),
                                           firma(self.fecha))
@@ -174,9 +166,7 @@ class TzolkinTray:
         oracle_win.run()
         oracle_win.destroy()
 
-
     def popup_menu_cb(self, widget, event, time, data=None):
-
         self.menu.show_all()
         self.menu.popup(None, None, gtk.status_icon_position_menu,
                              3, time, self.statusIcon)
@@ -195,7 +185,7 @@ class TzolkinTray:
         ok = cal_dialog.run()
         if ok:
             y, m, d = cal.get_date()
-            fecha = date(y, m+1, d)
+            fecha = date(y, m + 1, d)
             self.show_about_dialog(fecha)
         cal_dialog.destroy()
 
@@ -215,7 +205,10 @@ class TzolkinTray:
         about_dialog.run()
         about_dialog.destroy()
 
-if __name__ == "__main__":
-    tzolkin = TzolkinTray()
+
+def run():
+    TzolkinTray()
     gtk.main()
 
+if __name__ == "__main__":
+    run()
